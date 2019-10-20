@@ -1,12 +1,13 @@
 import QtQuick 2.12
 import stdCom 1.0
 import QtQuick.Controls 2.3
+import QtQuick.Layouts 1.3
+import QtQuick.Timeline 1.0
 
 Rectangle {
 
     width: Constants.width
     height: Constants.height
-    color: Constants.backgroundColor
 
     property alias busyIndicator: busyIndicator
     property alias button: button
@@ -39,8 +40,8 @@ Rectangle {
 
     BusyIndicator {
         id: busyIndicator
-        x: 399
-        y: 145
+        x: 336
+        y: 135
     }
 
     Connections {
@@ -51,5 +52,22 @@ Rectangle {
             slider.value = 0.5
             busyIndicator.visible = false
         }
+    }
+
+    Timeline {
+        id: timeline
+        animations: [
+            TimelineAnimation {
+                id: timelineAnimation
+                duration: 1000
+                to: 1000
+                from: 0
+                running: true
+                loops: 1
+            }
+        ]
+        startFrame: 0
+        enabled: true
+        endFrame: 1000
     }
 }

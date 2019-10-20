@@ -10,7 +10,8 @@ Item {
         Connections {
             target: screen01.button
             onClicked: {
-                screen01.color = Qt.colorEqual(Constants.backgroundColor, screen01.color) ? "skyblue" : Constants.backgroundColor
+                screen01.color = Qt.colorEqual(Constants.backgroundColor, screen01.color) ?
+                          Qt.rgba(Math.random(), Math.random(),Math.random(),1): Constants.backgroundColor
                 timer.restart()
             }
         }
