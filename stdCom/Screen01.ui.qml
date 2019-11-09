@@ -5,12 +5,13 @@ import QtQuick.Layouts 1.3
 import QtQuick.Timeline 1.0
 
 Rectangle {
+    id: rectangle
 
     width: Constants.width
     height: Constants.height
+    property alias busyBtn: busyBtn
 
     property alias busyIndicator: busyIndicator
-    property alias button: button
     property bool btnPressed: false
     //    signal onpressed
 
@@ -24,33 +25,20 @@ Rectangle {
         rotation: 360 * (slider.value - 0.5)
     }
 
-    Button {
-        id: button
-        x: 107
-        y: 97
-        text: qsTr("Button")
-    }
-
     Slider {
         id: slider
-        x: 112
-        y: 249
+        x: 413
+        y: 82
         value: 0.5
     }
 
-    BusyIndicator {
-        id: busyIndicator
-        x: 336
-        y: 135
-    }
-
     Connections {
-        target: button
+        target: busyBtn
         onClicked: {
             print("clicked")
             btnPressed = true
             slider.value = 0.5
-            busyIndicator.visible = false
+            busyIndicator.visible = busyIndicator.visible == false ? true : false
         }
     }
 
@@ -70,4 +58,31 @@ Rectangle {
         enabled: true
         endFrame: 1000
     }
+
+    Column {
+        id: column
+        x: 215
+        y: 204
+        width: 200
+        height: 213
+        spacing: 15
+
+        BusyIndicator {
+            id: busyIndicator
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
+            transformOrigin: Item.Center
+        }
+
+        Button {
+            id: busyBtn
+            text: qsTr("busyBtn")
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
+        }
+    }
 }
+
+/*##^##
+Designer {
+    D{i:4}
+}
+##^##*/

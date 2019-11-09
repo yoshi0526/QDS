@@ -107,12 +107,16 @@ Rectangle {
 
     Connections {
         target: registerButton
-        onClicked: { root.state = "registerState" }
+        onClicked: {
+            root.state = "registerState"
+        }
     }
 
     Connections {
         target: backButton
-        onClicked: { root.state = "loginState" }
+        onClicked: {
+            root.state = "loginState"
+        }
     }
     states: [
         State {
@@ -138,6 +142,3 @@ Rectangle {
         }
     ]
 }
-
-
-

@@ -28,9 +28,9 @@ Rectangle {
             id: pageTitle
             x: 242
             text: qsTr("Qt Account")
+            anchors.horizontalCenter: parent.horizontalCenter
             anchors.top: parent.top
             anchors.topMargin: 70
-            anchors.horizontalCenter: parent.horizontalCenter
             font.pointSize: 24
             font.family: Constants.font.family
         }
@@ -38,6 +38,7 @@ Rectangle {
         Column {
             id: fieldColumn
             x: 220
+            width: 300
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.top: parent.top
             anchors.topMargin: 200
@@ -55,6 +56,7 @@ Rectangle {
                 id: passwordField
                 width: 300
                 text: qsTr("")
+                placeholderText: "Password"
             }
         }
 
@@ -84,10 +86,9 @@ Rectangle {
     }
 }
 
-
-
-
-/*##^## Designer {
-    D{i:2;anchors_x:39;anchors_y:55}D{i:3;anchors_y:222}D{i:4;anchors_y:177}D{i:1;anchors_height:200;anchors_width:200;anchors_x:352;anchors_y:49}
+/*##^##
+Designer {
+    D{i:0;autoSize:true;height:480;width:640}
 }
- ##^##*/
+##^##*/
+

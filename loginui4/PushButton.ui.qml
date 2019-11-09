@@ -63,10 +63,9 @@ T.Button {
     ]
 }
 
-
-
-
-/*##^## Designer {
+/*##^##
+Designer {
     D{i:0;height:40;width:120}
 }
- ##^##*/
+##^##*/
+

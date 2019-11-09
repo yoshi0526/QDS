@@ -7,9 +7,11 @@ Rectangle {
     height: Constants.height
 
     Text {
+        id: pageTitle
+        x: 242
+        y: 169
         text: qsTr("Qt Account")
         font.pointSize: 24
-        anchors.centerIn: parent
         font.family: Constants.font.family
     }
 
@@ -26,10 +28,10 @@ Rectangle {
     PushButton {
         id: loginButton
         x: 260
-        y: 296
+        y: 302
         width: 120
         height: 40
-        text: qsTr("Log in")
+        text: qsTr("Log In")
     }
 
     PushButton {

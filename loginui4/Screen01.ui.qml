@@ -198,7 +198,7 @@ Rectangle {
             }
 
             Keyframe {
-                easing.bezierCurve: [0.39,0.575,0.565,1,1,1]
+                easing.bezierCurve: [0.39, 0.575, 0.565, 1, 1, 1]
                 value: 5
                 frame: 1000
             }
@@ -234,17 +234,10 @@ Rectangle {
     ]
 }
 
-
-
-
-
-
-
-
-
-
-/*##^## Designer {
+/*##^##
+Designer {
     D{i:5;timeline_expanded:true}D{i:7;timeline_expanded:true}D{i:8;anchors_y:245;timeline_expanded:true}
-D{i:9;anchors_y:290}D{i:10;anchors_y:200}D{i:13}
+D{i:9;anchors_y:290}D{i:10;anchors_y:200}
 }
- ##^##*/
+##^##*/
+
